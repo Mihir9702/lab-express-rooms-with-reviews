@@ -1,0 +1,46 @@
+<h1>{{name}}</h1>
+
+<figure>
+    <img src="{{imageUrl}}" alt="image of Room">
+    <figcaption>{{owner.fullName}}</figcaption>
+</figure>
+
+<p>{{description}}</p>
+
+{{!-- Update Room --}}
+<a href="/rooms/{{_id}}/update">Update</a>
+
+<br><br>
+
+{{!-- Reviews --}}
+<a href="/rooms/{{_id}}/add-review">Add Review</a>
+
+{{#each reviews}}
+    <p>{{this.comment}}</p>
+{{/each}}
+
+<br><br>
+
+{{!-- Delete Room --}}
+<form action="/rooms/{{_id}}/delete" method="post">
+    <button type="submit">Delete</button>
+</form>
+
+
+{{!-- Copy Room Url --}}
+<div>
+
+  <br />
+  <input type="button" value="Copy Url" onclick="roomLink();" />
+  <br /><textarea id="url" rows="2" cols="55"></textarea>
+
+</div>
+
+<script>
+const roomLink = () => {
+  const Url = document.getElementById("url");
+  Url.innerHTML = window.location.href;
+  Url.select();
+  document.execCommand("copy");
+}
+</script>

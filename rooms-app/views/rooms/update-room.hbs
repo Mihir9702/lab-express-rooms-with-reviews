@@ -1,0 +1,17 @@
+<form action="/rooms/{{_id}}/update" method="POST">
+
+   <label> Room Name
+      <input type="text" name="roomName" value="{{name}}">
+   </label>
+
+   <label> Description
+      <input type="text" name="roomDescription" value="{{description}}">
+   </label>
+
+   <label> Image Url
+      <input type="text" name="roomImageUrl" value="{{imageUrl}}">
+   </label>
+
+   <button type="submit">Update Room</button>
+
+</form>

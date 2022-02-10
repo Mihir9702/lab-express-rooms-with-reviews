@@ -1,0 +1,21 @@
+<form action="/rooms/create-room" method="POST">
+
+   <label> Room Name
+      <input type="text" name="roomName">
+   </label>
+
+   <label> Description
+      <input type="text" name="roomDescription">
+   </label>
+
+   <label> Image Url
+      <input type="text" name="roomImageUrl">
+   </label>
+
+   <button type="submit">Create Room</button>
+
+</form>
+
+{{#if errorMessage}}
+   {{errorMessage}}
+{{/if}}

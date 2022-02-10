@@ -1,0 +1,21 @@
+{{#each rooms}}
+
+<h1>{{name}}</h1>
+
+<figure>
+    <img src="{{imageUrl}}" alt="image of Room">
+    <figcaption>{{owner.fullName}}</figcaption>
+</figure>
+
+<p>{{description}}</p>
+
+{{!-- Reviews --}}
+<h4>Reviews: </h4>
+<div>
+    {{#each reviews}}
+        <p>{{this}}</p>
+    {{/each}}
+</div>
+
+
+{{/each}}
